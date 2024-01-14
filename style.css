@@ -56,11 +56,23 @@ header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
+  margin: 0;
+  padding-top: 20px;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 52px;
   color: #fff;
 }
 
@@ -71,7 +83,11 @@ header nav ul li {
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 0 20px 0 0;
+  padding: 0 10px 0 0;
+}
+
+header nav ul li :last-child a {
+  margin-right: 0;
 }
 
 header nav ul li a:hover {
@@ -79,10 +95,56 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
+.two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.two img {
+  margin-bottom: 10px;
+  object-fit: cover;
+  width: 100%;
+
+}
+
+#ideas img {
+  display: flex;
+  width: 100%;
+}
+
+#ideas h3 {
+  margin-top: 30px;
+}
+
+#host {
+  text-align:left;
+  
+}
+
+#host p {
+  text-align: left;
+}
+
+#host img {
+  width: 100%;
+  margin-top: 10px;
+}
+
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 form label {
@@ -117,3 +179,131 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 600px) {
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0;
+  }
+
+  header nav {
+    font-size: 15px;
+    margin-top: 0;
+    display: flex;
+  }
+
+  .logo {
+    padding-left: 15px;
+    font-size: 30px;
+    margin: 4px 0;
+    padding-top: 5px;
+  }
+
+  #stay h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  #stay {
+    margin: 10px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  form .group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .two {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  #about h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+  }
+
+  #about p {
+    display: flex;
+    text-align: justify;
+    width: 50%;
+    margin: 10px;
+    margin-right: 40px;
+    font-size: larger;
+  }
+  
+  .two img {
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+    margin: 10px;
+  
+  }
+
+  #ideas {
+    display: flex;
+    flex-direction: column;
+}
+
+#ideas .pair-1, .pair-2, .pair-3, .pair-4 {
+    margin-right: 10px;
+}
+
+.double-1, .double-2 {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 50%;
+    width: 100%;
+}
+
+.double-1 img, .double-2 img {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+.double-1 .pair-1, 
+.double-1 .pair-2, 
+.double-2 .pair-3, 
+.double-2 .pair-4 {
+    width: 50%;
+    height: 100%;
+}
+
+.double-1 .pair-2, .double-2 .pair-4 {
+    margin-right: 0;
+}
+
+#host {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#host img {
+  width: 100%;
+}
+
+.group-last{
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+}
